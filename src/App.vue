@@ -3,18 +3,18 @@
     <!-- <HelloWorld :testando="meuNome" :showIdade="true"/>
     <HelloWorld :testando="meuNome" :showIdade="false"/>
     <HelloWorld :testando="meuNome" :showIdade="true"/> -->
-    
 
-  <div v-for="(cliente, index) in clientes" :key="cliente.id">
-    <h4>{{ index + 1 }}</h4>
-    <HelloWorld :testando="cliente"/>
-    <hr>
-  <div>
-    <h2>Editar</h2>
-    <input type="text" v-model="cliente.nome">
-    <input type="text" v-model="cliente.email">
-  </div>
-  </div>
+
+    <div v-for="(cliente, index) in clientes" :key="cliente.id">
+      <h4>{{ index + 1 }}</h4>
+      <HelloWorld :testando="cliente" />
+      <hr>
+      <div>
+        <h2>Editar</h2>
+        <input type="text" v-model="cliente.nome">
+        <input type="text" v-model="cliente.email">
+      </div>
+    </div>
   </div>
 </template>
 

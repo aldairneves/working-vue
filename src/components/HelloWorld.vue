@@ -1,5 +1,5 @@
 <template>
-  <div :class="{'dns' : !isCliente, 'Cliente' : isCliente}">
+  <div :class="{ 'dns': !isCliente, 'Cliente': isCliente }">
     <h1>Inicio dos Estudos - Vue</h1>
     <h2>Meu nome é {{ testando.nome }}, sou do estado da {{ testando.email }} - {{ testando.pais }}</h2>
     <p v-if="showIdade === true">Meu nome Verdadeiro é {{ testando.idade }}</p>
@@ -36,6 +36,7 @@ export default {
   text-align: center;
   margin-top: 2%;
 }
+
 .Cliente {
   background-color: #338bff;
   max-width: 500;
