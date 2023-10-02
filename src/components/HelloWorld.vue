@@ -4,6 +4,8 @@
     <h2>Meu nome é {{ testando.nome }}, sou do estado da {{ testando.email }} - {{ testando.pais }}</h2>
     <p v-if="showIdade === true">Meu nome Verdadeiro é {{ testando.idade }}</p>
     <p v-else>Eu escondir a idade!</p>
+    <button @click="mudarCor()">mudar a cor</button>
+    <button @click="eventoDeletar()">Deletar</button>
     <hr>
     <div>
     </div>
@@ -21,6 +23,15 @@ export default {
   props: {
     testando: Object,
     showIdade: Boolean
+  },
+  methods: {
+    mudarCor: function(){
+      this.isCliente = !this.isCliente;
+    },
+    eventoDeletar: function(){
+      console.log("Componente Filho")
+      this.$emit("delete", {idDoCliente: this.testando.id, cidade: "Itaquara", components: this})
+    }
   }
 
 }
