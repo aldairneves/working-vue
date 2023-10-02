@@ -25,12 +25,12 @@ export default {
     showIdade: Boolean
   },
   methods: {
-    mudarCor: function(){
+    mudarCor: function () {
       this.isCliente = !this.isCliente;
     },
-    eventoDeletar: function(){
+    eventoDeletar: function () {
       console.log("Componente Filho")
-      this.$emit("delete", {idDoCliente: this.testando.id, cidade: "Itaquara", components: this})
+      this.$emit("delete", { idDoCliente: this.testando.id, cidade: "Itaquara", components: this })
     }
   }
 

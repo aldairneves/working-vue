@@ -110,6 +110,7 @@ export default {
   padding: 1%;
   text-align: center;
 }
+
 #nomeerro {
   color: red;
 }
